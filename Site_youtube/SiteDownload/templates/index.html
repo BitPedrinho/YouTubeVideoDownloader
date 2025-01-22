@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Download</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css')  }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">YouTube Download</h1>
+    </header>
+    <main class="container">
+      <section>
+        <div class="video">
+          <h1>Cole o link do video</h1>
+          <form action="/receber_url" method="post">
+            <input
+              type="text"
+              id="url"
+              name="url"
+              placeholder="Cole o link do vídeo aqui"
+            />
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="audio">
+          <h1 class="audio">Cole o link do audio</h1>
+          <form action="/receber_url_audio" method="post">
+            <input
+              type="text"
+              id="url_audio"
+              name="url_audio"
+              placeholder="Cole o link do vídeo aqui"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
